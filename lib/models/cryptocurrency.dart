@@ -1,4 +1,5 @@
-import '../widgets/chart.dart';
+
+import 'chartModel.dart';
 
 class Cryptocurrency {
   String? id;
@@ -16,6 +17,7 @@ class Cryptocurrency {
   double? ath;
   double? atl;
   bool isFavourite = false;
+  List<ChartData>chartData = [];
   Cryptocurrency(
       {required this.id,
       required this.symbol,

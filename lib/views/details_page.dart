@@ -150,14 +150,16 @@ class _DetailsPageState extends State<DetailsPage> {
                   )
                 ],
               ),
+              const SizedBox(height: 10,),
               Center(
                 child: ElevatedButton(
-                  child: const Text('Price Chart'),
+                  child: const Text('Refresh Price Chart'),
                   onPressed: () {
                     chartProvider.getChatData(widget.id);
                   },
                 ),
               ),
+              const SizedBox(height: 10,),
               (chartProvider.chartData.isNotEmpty)
                   ? SfCartesianChart(
                       primaryXAxis: DateTimeAxis(),
